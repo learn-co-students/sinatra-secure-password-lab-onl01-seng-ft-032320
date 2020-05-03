@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
     if params[:username].blank? || params[:password].blank?
       redirect to :failure
     else
-      user = User.create(params)
+      User.create(params)
       redirect to :login
     end
   end
